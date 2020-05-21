@@ -24,7 +24,7 @@ pipeline {
                pwd
                echo ${GIT_BRANCH}
                echo ${WORKSPACE}
-               echo ${BUILDNUMBER}'''
+               echo ${BUILD_NUMBER}'''
          }
       }
    }
