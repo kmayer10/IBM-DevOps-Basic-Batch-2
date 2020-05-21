@@ -16,5 +16,16 @@ pipeline {
             archiveArtifacts 'target/devops.war'
          }
       }
+      stage('Hello') {
+         steps {
+            sh label: '', script: '''
+               #!/bin/bash
+               date
+               pwd
+               echo ${GIT_BRANCH}
+               echo ${WORKSPACE}
+               echo ${BUILDNUMBER}'''
+         }
+      }
    }
 }
