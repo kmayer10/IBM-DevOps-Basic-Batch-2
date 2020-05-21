@@ -8,5 +8,12 @@ pipeline {
             echo 'This is for Biren Query'
          }
       }
+      stage('Maven Build') {
+         steps {
+            withMaven(maven: 'mvn_3.6.3') {
+                sh 'mvn clean package'
+            }
+         }
+      }
    }
 }
