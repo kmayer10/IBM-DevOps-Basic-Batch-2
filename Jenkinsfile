@@ -16,7 +16,7 @@ pipeline {
             archiveArtifacts 'target/devops.war'
          }
       }
-      stage('Hello') {
+      stage('Shell Script') {
          steps {
             sh label: '', script: '''
                #!/bin/bash
